@@ -1,0 +1,62 @@
+function game(playerChoice, computerChoice) {
+  console.log(`Player chose ${playerChoice}, Computer chose ${computerChoice}`);
+
+if(playerChoice === computerChoice) {
+  console.log("Its a tie");
+}
+  switch(playerChoice, computerChoice) {
+    case "rock", "scissors":
+      console.log("Player 1 wins")
+      break;
+    default: console.log("something went wrong", playerChoice == computerChoice)
+  }}
+
+game("rock", "scissors");
+
+
+
+const dadHappy = (food) => {
+  if(food === "pizza") {
+    console.log(`Oh, ${food}? Yeah dad likes pizza`)}
+    else {console.log("dad only likes pizza")}
+  }
+ console.log(dadHappy);
+
+function decorate(fm) {
+  console.log(`I'm about to do something`)
+  fm('pizza')
+  console.log("Im done");
+}
+decorate(dadHappy);
+
+
+
+
+const ordering = [`paper`, `rock`, 'scissors', 'paper', 'rock']
+
+p1 = ordering[Math.floor(Math.random() * 3)]
+p2 = ordering[Math.floor(Math.random() * 3)]
+
+function get_pos(choice) {
+for (let i = 1; i <= ordering.length; i++) {
+  console.log(`${i}`, `${ordering[i]}`, `${choice}`)
+  if (ordering[i]== choice) {
+    console.log(`Found it, returning: ${i}`)
+    return i
+  }
+} return -1
+}
+console.log('')
+function can_i_win(p1, p2){
+  pos = get_pos(p1)
+  console.log( `Player one gets: ${ordering[pos]} beats ${ordering[pos + 1]} but is beaten by ${ordering[pos - 1]}`)
+  console.log( `Player two gets ${p2}`)
+ if (p2 == ordering[pos - 1]) {
+  console.log('Player 2 wins')
+ } else if ( p2 == ordering[pos + 1]) {
+   console.log('Player 2 loses')
+ } else if (p1 == p2) {
+   console.log('Game is tied')
+ }
+}
+ can_i_win(p1, p2);
